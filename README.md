@@ -8,7 +8,7 @@ A comprehensive repository documenting my daily progress in Data Structures and 
 
 ```
 Daily-DSA/
-├── know_basics/          # Fundamental programming concepts
+├── know_basics/              # Fundamental programming concepts
 │   ├── count_digits.cpp
 │   ├── reverse_a_number.cpp
 │   ├── palindrome_number.cpp
@@ -16,8 +16,12 @@ Daily-DSA/
 │   ├── gcd.cpp
 │   ├── check_for_prime.cpp
 │   ├── print_all_divisors.cpp
-│   └── README.md         # Detailed notes and explanations
-└── README.md            # This file - Daily progress tracker
+│   └── README.md             # Detailed notes and explanations
+├── learn_basic_recursion/    # Recursion fundamentals
+│   ├── uderstand_recursion_by_print_n_times.cpp
+│   ├── print_1_to_n.cpp
+│   └── README.md             # Detailed notes and explanations
+└── README.md                 # This file - Daily progress tracker
 ```
 
 ---
@@ -33,9 +37,44 @@ Daily-DSA/
   - Check for Prime
   - Print All Divisors
 
+- [x] **Learn Basic Recursion** - Understanding recursion fundamentals
+  - Understand Recursion by Print N Times
+  - Print 1 to N (Forward Recursion & Backtracking)
+
 ---
 
 ## 📝 Daily Progress Log
+
+### Day 3: 15 Jan 2025
+**Topics:** Learn Basic Recursion - Fundamentals
+
+**Files Added:**
+- `learn_basic_recursion/uderstand_recursion_by_print_n_times.cpp` - Print a name N times using recursion
+- `learn_basic_recursion/print_1_to_n.cpp` - Print numbers 1 to N using forward recursion and backtracking
+- `learn_basic_recursion/README.md` - Comprehensive guide to recursion with detailed explanations, examples, and complexity analysis
+
+**What I Learned:**
+- Recursion is a function calling itself to solve problems by breaking them into smaller subproblems
+- Every recursive function needs a base condition to prevent infinite recursion and stack overflow
+- Forward recursion: print before recursive call (ascending order)
+- Backtracking: print after recursive call (descending order)
+- Recursive tree visualization helps understand execution flow
+
+**Key Insights:**
+- The position of the print statement (before/after recursive call) determines output order
+- Each recursive call consumes stack memory - O(N) space complexity for N calls
+- Stack overflow occurs when there's no base condition or it's never reached
+- Recursion simplifies code but has higher memory usage compared to iteration
+- Understanding the call stack is crucial for mastering recursion
+
+**Recursion Advantages vs Disadvantages:**
+- ✅ Elegant and readable code for naturally recursive problems (trees, graphs, divide-and-conquer)
+- ✅ Fewer lines of code compared to iterative solutions
+- ❌ Higher memory usage due to stack frames
+- ❌ Risk of stack overflow with deep recursion
+- ❌ Slower execution due to function call overhead
+
+---
 
 ### Day 2: 14 Jan 2025 - 5:36 PM
 **Topics:** Know Basics - Number Theory Algorithms
@@ -81,11 +120,14 @@ Daily-DSA/
 ## 🎯 Goals & Roadmap
 
 ### Short-term Goals (This Week)
-- [ ] Complete all "Know Basics" problems
-- [ ] Understand time and space complexity analysis
+- [x] Complete all "Know Basics" problems
+- [x] Start learning recursion fundamentals
+- [x] Understand time and space complexity analysis
+- [ ] Complete basic recursion problems
 - [ ] Practice pattern recognition in problems
 
 ### Medium-term Goals (This Month)
+- [ ] Master recursion (factorial, Fibonacci, array operations)
 - [ ] Arrays and Hashing
 - [ ] Two Pointers technique
 - [ ] Sliding Window problems
@@ -108,16 +150,16 @@ Daily-DSA/
 
 ## 🔥 Streak Counter
 
-Current Streak: **2 days** 🎉
+Current Streak: **3 days** 🎉
 
 ---
 
 ## 📊 Statistics
 
-- **Total Programs:** 7
-- **Topics Covered:** 1
-- **Total Study Time:** ~4 hours
-- **Problems Solved:** 7
+- **Total Programs:** 9
+- **Topics Covered:** 2
+- **Total Study Time:** ~6 hours
+- **Problems Solved:** 9
 
 ---
 
@@ -138,6 +180,6 @@ Current Streak: **2 days** 🎉
 
 ---
 
-**Last Updated:** 14 Jan 2025
+**Last Updated:** 15 Jan 2025
 
 **Keep Learning, Keep Growing! 💪**
