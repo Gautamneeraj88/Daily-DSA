@@ -77,6 +77,12 @@ Daily-DSA/
 
 ---
 
+## 🔮 Coming Up Next
+
+- **Hashing**
+
+---
+
 ## 📝 Daily Progress Log
 
 ### Day 4: 25 Jan 2026
