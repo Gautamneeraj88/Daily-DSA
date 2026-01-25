@@ -16,11 +16,31 @@ Daily-DSA/
 │   ├── gcd.cpp
 │   ├── check_for_prime.cpp
 │   ├── print_all_divisors.cpp
-│   └── README.md             # Detailed notes and explanations
+│   └── README.md
 ├── learn_basic_recursion/    # Recursion fundamentals
 │   ├── uderstand_recursion_by_print_n_times.cpp
 │   ├── print_1_to_n.cpp
-│   └── README.md             # Detailed notes and explanations
+│   ├── sum_of_n_number.cpp
+│   ├── factorial_of_a_number.cpp
+│   ├── fibonacci_series.cpp
+│   ├── reverse_an_array.cpp
+│   ├── check_string_is_palindrome.cpp
+│   └── README.md
+├── pattern/                  # Pattern printing problems
+│   ├── square_pattern_1st.cpp
+│   ├── square_pattern_2nd.cpp
+│   ├── triangle_pattern_1st.cpp
+│   ├── reverse_trianle_pattern_1st.cpp
+│   ├── inverted_triangle_pattern_1st.cpp
+│   ├── Pyramid_pattern_1st.cpp
+│   ├── Floyed_triangle_pattern.cpp
+│   ├── printing_starts.cpp
+│   ├── sum_of_n_odd_numbers.cpp
+│   ├── sum_of_n_even_numbers.cpp
+│   ├── sum_of_number_divisible_by_3.cpp
+│   ├── check_a_number_prime.cpp
+│   ├── printing_factorial_of_n_numbers.cpp
+│   └── README.md
 └── README.md                 # This file - Daily progress tracker
 ```
 
@@ -40,10 +60,63 @@ Daily-DSA/
 - [x] **Learn Basic Recursion** - Understanding recursion fundamentals
   - Understand Recursion by Print N Times
   - Print 1 to N (Forward Recursion & Backtracking)
+  - Sum of First N Numbers
+  - Factorial of a Number
+  - Fibonacci Series
+  - Reverse an Array
+  - Check String is Palindrome
+
+- [x] **Pattern Printing** - Nested loops and pattern logic
+  - Square Patterns (Stars, Numbers, Characters)
+  - Triangle Patterns (Multiple variations)
+  - Inverted Triangle Patterns
+  - Pyramid Patterns
+  - Floyd's Triangle
+  - Sum of Odd/Even Numbers
+  - Sum of Numbers Divisible by 3
 
 ---
 
 ## 📝 Daily Progress Log
+
+### Day 4: 25 Jan 2026
+**Topics:** Learn Basic Recursion (Advanced) + Pattern Printing
+
+**Files Added (Recursion):**
+- `learn_basic_recursion/sum_of_n_number.cpp` - Sum of first N natural numbers using recursion
+- `learn_basic_recursion/factorial_of_a_number.cpp` - Factorial calculation using recursion
+- `learn_basic_recursion/fibonacci_series.cpp` - Fibonacci series using recursion
+- `learn_basic_recursion/reverse_an_array.cpp` - Array reversal (brute force + recursive two-pointer)
+- `learn_basic_recursion/check_string_is_palindrome.cpp` - Palindrome check with multiple approaches
+
+**Files Added (Patterns):**
+- `pattern/square_pattern_1st.cpp` - Square patterns with numbers, stars, characters
+- `pattern/triangle_pattern_1st.cpp` - Triangle patterns (5 variations)
+- `pattern/Pyramid_pattern_1st.cpp` - Pyramid number pattern
+- `pattern/Floyed_triangle_pattern.cpp` - Floyd's triangle pattern
+- `pattern/inverted_triangle_pattern_1st.cpp` - Inverted triangle pattern
+- `pattern/reverse_trianle_pattern_1st.cpp` - Reverse triangle pattern
+- `pattern/sum_of_n_odd_numbers.cpp` - Sum of first N odd numbers
+- `pattern/sum_of_n_even_numbers.cpp` - Sum of first N even numbers
+- `pattern/sum_of_number_divisible_by_3.cpp` - Sum of numbers divisible by 3
+- `pattern/check_a_number_prime.cpp` - Prime number checking
+- `pattern/printing_factorial_of_n_numbers.cpp` - Factorial series
+
+**What I Learned:**
+- Recursive formula: `sum(n) = n + sum(n-1)` with base case `sum(1) = 1`
+- Factorial: `n! = n * (n-1)!` with base case `0! = 1! = 1`
+- Fibonacci: `fib(n) = fib(n-1) + fib(n-2)` - exponential time without memoization
+- Two-pointer technique in recursion for array reversal (in-place O(1) space)
+- Palindrome check using recursion with alphanumeric filtering
+- Nested loops for pattern printing: outer loop = rows, inner loop = columns
+- Floyd's triangle uses consecutive numbers across rows
+
+**Key Insights:**
+- Recursive solutions are elegant but may have higher time complexity (Fibonacci is O(2^N))
+- Two-pointer recursion is efficient for in-place operations
+- Pattern problems help build loop intuition essential for DSA
+
+---
 
 ### Day 3: 15 Jan 2025
 **Topics:** Learn Basic Recursion - Fundamentals
@@ -123,11 +196,11 @@ Daily-DSA/
 - [x] Complete all "Know Basics" problems
 - [x] Start learning recursion fundamentals
 - [x] Understand time and space complexity analysis
-- [ ] Complete basic recursion problems
-- [ ] Practice pattern recognition in problems
+- [x] Complete basic recursion problems
+- [x] Practice pattern recognition in problems
 
 ### Medium-term Goals (This Month)
-- [ ] Master recursion (factorial, Fibonacci, array operations)
+- [x] Master recursion (factorial, Fibonacci, array operations)
 - [ ] Arrays and Hashing
 - [ ] Two Pointers technique
 - [ ] Sliding Window problems
@@ -150,16 +223,15 @@ Daily-DSA/
 
 ## 🔥 Streak Counter
 
-Current Streak: **3 days** 🎉
+Current Streak: **4 days** 🎉
 
 ---
 
 ## 📊 Statistics
 
-- **Total Programs:** 9
-- **Topics Covered:** 2
-- **Total Study Time:** ~6 hours
-- **Problems Solved:** 9
+- **Total Programs:** 25
+- **Topics Covered:** 3
+- **Problems Solved:** 25
 
 ---
 
@@ -180,6 +252,6 @@ Current Streak: **3 days** 🎉
 
 ---
 
-**Last Updated:** 15 Jan 2025
+**Last Updated:** 25 Jan 2026
 
 **Keep Learning, Keep Growing! 💪**

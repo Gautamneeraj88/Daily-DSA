@@ -20,6 +20,11 @@ A comprehensive guide to understanding recursion fundamentals with practical C++
 
 1. **Understand Recursion by Print N Times** (`uderstand_recursion_by_print_n_times.cpp`)
 2. **Print Numbers from 1 to N** (`print_1_to_n.cpp`)
+3. **Sum of First N Numbers** (`sum_of_n_number.cpp`)
+4. **Factorial of a Number** (`factorial_of_a_number.cpp`)
+5. **Fibonacci Series** (`fibonacci_series.cpp`)
+6. **Reverse an Array** (`reverse_an_array.cpp`)
+7. **Check String is Palindrome** (`check_string_is_palindrome.cpp`)
 
 ---
 
@@ -188,6 +193,174 @@ backtracking(1, 5) → calls backtracking(2, 5)
 
 ---
 
+### 3. Sum of First N Numbers
+
+**Problem:** Find the sum of first N natural numbers using recursion.
+
+**Formula:** `sum(n) = n + sum(n-1)` with base case `sum(0) = 0`
+
+**Code Structure:**
+```cpp
+int sum(int n) {
+    if (n == 0) return 0;  // Base case
+    return n + sum(n - 1);  // Recursive call
+}
+```
+
+**Example (n=5):**
+```
+sum(5) = 5 + sum(4)
+       = 5 + 4 + sum(3)
+       = 5 + 4 + 3 + sum(2)
+       = 5 + 4 + 3 + 2 + sum(1)
+       = 5 + 4 + 3 + 2 + 1 + sum(0)
+       = 5 + 4 + 3 + 2 + 1 + 0 = 15
+```
+
+**Time Complexity:** O(N) | **Space Complexity:** O(N)
+
+---
+
+### 4. Factorial of a Number
+
+**Problem:** Calculate n! (n factorial) using recursion.
+
+**Formula:** `n! = n × (n-1)!` with base case `0! = 1! = 1`
+
+**Code Structure:**
+```cpp
+int factorial(int n) {
+    if (n <= 1) return 1;  // Base case
+    return n * factorial(n - 1);
+}
+```
+
+**Example (n=5):**
+```
+factorial(5) = 5 × factorial(4)
+             = 5 × 4 × factorial(3)
+             = 5 × 4 × 3 × factorial(2)
+             = 5 × 4 × 3 × 2 × factorial(1)
+             = 5 × 4 × 3 × 2 × 1 = 120
+```
+
+**Time Complexity:** O(N) | **Space Complexity:** O(N)
+
+---
+
+### 5. Fibonacci Series
+
+**Problem:** Find the Nth Fibonacci number using recursion.
+
+**Formula:** `fib(n) = fib(n-1) + fib(n-2)` with base cases `fib(0) = 0, fib(1) = 1`
+
+**Code Structure:**
+```cpp
+int fibonacci(int n) {
+    if (n <= 1) return n;  // Base case
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+
+**Example (n=5):**
+```
+fib(5) = fib(4) + fib(3)
+       = (fib(3) + fib(2)) + (fib(2) + fib(1))
+       = ((fib(2) + fib(1)) + (fib(1) + fib(0))) + ((fib(1) + fib(0)) + 1)
+       = ((1 + 1) + (1 + 0)) + ((1 + 0) + 1)
+       = 3 + 2 = 5
+
+Series: 0, 1, 1, 2, 3, 5, 8, 13, 21...
+```
+
+**Time Complexity:** O(2^N) - Exponential (without memoization)
+**Space Complexity:** O(N) - Maximum recursion depth
+
+**Note:** This naive approach recalculates same values multiple times. Use memoization or iterative approach for better performance.
+
+---
+
+### 6. Reverse an Array
+
+**Problem:** Reverse an array using recursion with two-pointer technique.
+
+**Approaches:**
+
+#### Approach 1: Brute Force (Extra Space)
+- Create a new array
+- Copy elements in reverse order
+
+#### Approach 2: Two-Pointer Recursion (In-Place)
+- Use two pointers: `left` and `right`
+- Swap elements at both pointers
+- Move pointers towards center recursively
+
+**Code Structure:**
+```cpp
+void reverseArray(int arr[], int left, int right) {
+    if (left >= right) return;  // Base case
+    swap(arr[left], arr[right]);
+    reverseArray(arr, left + 1, right - 1);  // Move pointers
+}
+```
+
+**Example:**
+```
+arr = [1, 2, 3, 4, 5]
+
+Step 1: swap(1, 5) → [5, 2, 3, 4, 1], left=1, right=3
+Step 2: swap(2, 4) → [5, 4, 3, 2, 1], left=2, right=2
+Step 3: left >= right → return
+
+Result: [5, 4, 3, 2, 1]
+```
+
+**Time Complexity:** O(N) | **Space Complexity:** O(N) for recursion stack, O(1) auxiliary
+
+---
+
+### 7. Check String is Palindrome
+
+**Problem:** Check if a string is palindrome using recursion.
+
+**Approaches:**
+
+#### Approach 1: Iterative Two-Pointer
+```cpp
+bool isPalindrome(string s) {
+    int left = 0, right = s.length() - 1;
+    while (left < right) {
+        if (s[left] != s[right]) return false;
+        left++; right--;
+    }
+    return true;
+}
+```
+
+#### Approach 2: Recursive Two-Pointer
+```cpp
+bool isPalindromeRecursive(string &s, int left, int right) {
+    if (left >= right) return true;  // Base case
+    if (s[left] != s[right]) return false;
+    return isPalindromeRecursive(s, left + 1, right - 1);
+}
+```
+
+**Example:**
+```
+s = "madam"
+
+Check: s[0]='m' == s[4]='m' ✓ → recurse(1, 3)
+Check: s[1]='a' == s[3]='a' ✓ → recurse(2, 2)
+Check: left >= right → return true
+
+Result: "madam" is a palindrome
+```
+
+**Time Complexity:** O(N) | **Space Complexity:** O(N) for recursive, O(1) for iterative
+
+---
+
 ## 🧠 Important Recursion Concepts
 
 ### 1. Stack Overflow in Recursion
@@ -313,23 +486,23 @@ if (times <= 0) return;
 
 ## 🎓 Learning Path
 
-**Beginner Level** (Current):
+**Beginner Level** (Completed):
 - ✅ Understanding recursion basics
 - ✅ Print N times
 - ✅ Print 1 to N (forward and backward)
+- ✅ Sum of first N numbers
+- ✅ Factorial calculation
+- ✅ Fibonacci series
+- ✅ Palindrome checking
+- ✅ Array reversal
 
 **Next Steps:**
-- [ ] Print N to 1 using recursion
-- [ ] Sum of first N numbers
-- [ ] Factorial calculation
-- [ ] Fibonacci series
-- [ ] Palindrome checking
-- [ ] Array reversal
-- [ ] String reversal
-
-**Advanced Topics:**
 - [ ] Binary Search (divide and conquer)
 - [ ] Tree traversals (inorder, preorder, postorder)
+- [ ] Merge Sort / Quick Sort
+- [ ] Subset generation
+
+**Advanced Topics:**
 - [ ] Backtracking problems (N-Queens, Sudoku)
 - [ ] Dynamic Programming with memoization
 - [ ] Graph DFS traversal
@@ -373,23 +546,28 @@ void divideConquer(int left, int right) {
 | Program | Time Complexity | Space Complexity | Reason |
 |---------|----------------|------------------|---------|
 | Print N Times | O(N) | O(N) | N recursive calls, N stack frames |
-| Print 1 to N (Forward) | O(N) | O(N) | N recursive calls, N stack frames |
-| Print 1 to N (Backtrack) | O(N) | O(N) | N recursive calls, N stack frames |
+| Print 1 to N | O(N) | O(N) | N recursive calls, N stack frames |
+| Sum of N Numbers | O(N) | O(N) | N recursive calls |
+| Factorial | O(N) | O(N) | N recursive calls |
+| Fibonacci | O(2^N) | O(N) | Exponential calls, max depth N |
+| Reverse Array | O(N) | O(N) | N/2 swaps, N/2 stack frames |
+| Palindrome Check | O(N) | O(N) | N/2 comparisons, N/2 stack frames |
 
-**Space Complexity Note:** The O(N) space is due to the recursion call stack, which stores function frames for each recursive call.
+**Note:** Fibonacci has exponential time due to overlapping subproblems. Use memoization to reduce to O(N).
 
 ---
 
 ## 🚀 How to Run
 
 ```bash
-# Compile
-g++ -o print_n_times uderstand_recursion_by_print_n_times.cpp
-g++ -o print_1_to_n print_1_to_n.cpp
+# Compile any program
+g++ -o output_name filename.cpp
 
-# Execute
-./print_n_times
-./print_1_to_n
+# Examples
+g++ -o factorial factorial_of_a_number.cpp && ./factorial
+g++ -o fibonacci fibonacci_series.cpp && ./fibonacci
+g++ -o reverse reverse_an_array.cpp && ./reverse
+g++ -o palindrome check_string_is_palindrome.cpp && ./palindrome
 ```
 
 ---
@@ -408,4 +586,4 @@ g++ -o print_1_to_n print_1_to_n.cpp
 
 ---
 
-**Last Updated:** 15 Jan 2025
+**Last Updated:** 25 Jan 2026
